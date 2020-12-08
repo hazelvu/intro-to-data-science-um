@@ -1,4 +1,6 @@
 ## Assignment 1
+
+#Part A: Finda all names
 import re
 def names():
     simple_string = """Amy is 5 years old, and her sister Mary is 2 years old. 
@@ -9,6 +11,7 @@ def names():
 
 names()
 
+#Part B: Find all students with grade B
 import re
 def grades():
     with open ("assignments/assignment1/assets/grades.txt", "r") as file:
@@ -21,6 +24,7 @@ def grades():
 
 grades()
 
+#Part C: Find all instances with POST
 import re
 def logs():
     with open("assignments/assignment1/assets/logdata.txt", "r") as file:
