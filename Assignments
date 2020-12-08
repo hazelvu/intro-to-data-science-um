@@ -1,6 +1,6 @@
 ## Assignment 1
 
-#Part A: Finda all names
+#Part A: Find all names
 import re
 def names():
     simple_string = """Amy is 5 years old, and her sister Mary is 2 years old. 
