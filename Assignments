@@ -1,0 +1,40 @@
+## Assignment 1
+import re
+def names():
+    simple_string = """Amy is 5 years old, and her sister Mary is 2 years old. 
+    Ruth and Peter, their parents, have 3 kids."""
+
+    result = re.findall('[A-Z][a-z]*',simple_string)
+    return result
+
+names()
+
+import re
+def grades():
+    with open ("assignments/assignment1/assets/grades.txt", "r") as file:
+        grades = file.read()
+
+    # YOUR CODE HERE
+    #raise NotImplementedError()
+    result = re.findall('[A-Z][a-z]*\s[A-Z][a-z]*(?=:\sB)', grades)
+    return result
+
+grades()
+
+import re
+def logs():
+    with open("assignments/assignment1/assets/logdata.txt", "r") as file:
+        logdata = file.read()
+        #print(logdata)
+        pattern="""
+        (?P<host>.+)        
+        (-\s)   
+        (?P<user_name>\w+)  
+        (\s) 
+        (\[(?P<time>[-\w\s:/]+)\])
+        (\s)
+        ("(?P<request>POST.+)")
+                 """
+        for item in re.finditer(pattern,logdata,re.VERBOSE):
+            print(item.groupdict())
+        return(item)
